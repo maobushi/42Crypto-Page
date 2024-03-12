@@ -2,7 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import Navbar from "./navbar";
 import HomeMenu from "./HomeMenu";
-import BlockchainPicture from "../public/BlockchainPicture.jpeg"
+import BlockchainPicture from "../../public/BlockchainPicture.jpeg"
 
 
 const CommonComponent = () => {
