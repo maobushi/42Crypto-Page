@@ -4,22 +4,15 @@ import HomePicture from "../components/home-picture";
 import React from 'react'
 import { InitiativeList } from "@/components/initiativeList";
 import BlockchainPicture from "../public/BlockchainPicture.jpeg"
-
+import CommonComponent from "../components/CommonComponent";
 import HomeMenu from "../components/HomeMenu";
 
 const page = () => {
   return (
-    <div className="w-full justify-center items-center h-screen ">
-
-    <Navbar />
- 
-    <Image src={BlockchainPicture} alt="Sample Top Page Image" layout="responsive"  objectFit="contain" />
-
-    <HomeMenu />
+    <div >
+    <CommonComponent />
     <InitiativeList />
-
     </div>
-
   )
 };
 export default page
