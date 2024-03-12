@@ -1,0 +1,63 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Initiative {
+  id             String    @id
+  title          String
+  cardDescription String
+  overview       String
+  hashtag        String
+  createdAt      DateTime
+  updatedAt      DateTime
+  leaderIdOfInitiative       String
+  leaderOfInitiative         Member    @relation("LeaderInitiatives",fields: [leaderIdOfInitiative], references: [id])
+  members        Member[]  @relation("MemberInitiatives")
+}
+
+model Project {
+  id          String   @id
+  title       String
+  description String
+  hashtag     String
+  createdAt   DateTime
+  updatedAt   DateTime
+  leaderIdOfProject    String
+  leaderOfProject      Member   @relation("LeaderProjects",fields: [leaderIdOfProject], references: [id])
+  members     Member[] @relation("MemberProjects")
+}
+
+model Member {
+  id           String       @id
+  email        String
+  name         String
+  password     String
+  createdAt    DateTime
+  updatedAt    DateTime
+  affiliatedInitiatives  Initiative[] @relation("MemberInitiatives")
+  projects     Project[]    @relation("MemberProjects")
+  leaderOfInitiative     Initiative[] @relation("LeaderInitiatives")
+  leaferOfProject        Project[]    @relation("LeaderProjects")
+  authorOf     Publish[] 
+}
+
+model Publish {
+  id             String   @id
+  title          String
+  description    String
+  initiativeName String
+  hashtag        String
+  createdAt      DateTime
+  updatedAt      DateTime
+  authorId       String
+  author         Member   @relation(fields: [authorId], references: [id])
+}
+
