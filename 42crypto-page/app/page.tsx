@@ -1,25 +1,18 @@
 import Image from "next/image";
-import Navbar from "../components/navbar";
-import HomePicture from "../components/home-picture";
+import Navbar from "../components/CommonComponent/navbar";
+import HomePicture from "../components/CommonComponent/home-picture";
 import React from 'react'
-import { InitiativeList } from "@/components/initiativeList";
+import { InitiativeList } from "@/components/CommonComponent/initiativeList";
 import BlockchainPicture from "../public/BlockchainPicture.jpeg"
-
-import HomeMenu from "../components/HomeMenu";
+import CommonComponent from "../components/CommonComponent/CommonComponent";
+import HomeMenu from "../components/CommonComponent/HomeMenu";
 
 const page = () => {
   return (
-    <div className="w-full justify-center items-center h-screen ">
-
-    <Navbar />
- 
-    <Image src={BlockchainPicture} alt="Sample Top Page Image" layout="responsive"  objectFit="contain" />
-
-    <HomeMenu />
+    <div >
+    <CommonComponent />
     <InitiativeList />
-
     </div>
-
   )
 };
 export default page

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `app`
@@ -22,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="jp">
+      <Analytics/> 
       <body className={myFont.className}>{children}</body>
     </html>
   );

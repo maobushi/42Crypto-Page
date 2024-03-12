@@ -8,7 +8,7 @@ import InitiativeCard from "./InitiativeCard"
 
 export function InitiativeList() {
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 p-5">
 <InitiativeCard image="./initiative-logo-test.svg" name="Zero-knowledge Proofs" description="Advancing the state of zero-knowledge proofs to enhance privacy and security in blockchain technologies." directorname="Alice Johnson" hashtag="#cryptography #privacy #blockchain +42 more"/>
 <InitiativeCard image="./initiative-logo-test.svg" name="Decentralized Identity (DID)" description="Promoting the adoption and development of decentralized identity solutions across various blockchain platforms." directorname="Bob Smith" hashtag="#identity #decentralization #blockchain +35 more"/>
 
