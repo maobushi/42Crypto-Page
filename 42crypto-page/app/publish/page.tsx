@@ -7,13 +7,14 @@ import BlockchainPicture from "../../public/BlockchainPicture.jpeg"
 import CommonComponent from "../../components/CommonComponent/CommonComponent";
 import HomeMenu from "../../components/CommonComponent/HomeMenu";
 import {PublishList} from "../../components/publish/publish-component";
-
+import Footer from "@/components/CommonComponent/footer";
 
 const page = () => {
   return (
 	<div>
     <CommonComponent />
 	<PublishList />
+  <Footer />
     </div>
 
   )

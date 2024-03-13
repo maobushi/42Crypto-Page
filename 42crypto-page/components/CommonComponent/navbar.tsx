@@ -27,18 +27,6 @@ export default function Navbar() {
   return (
     <nav className={`py-4 px-8 fixed top-0 flex w-full z-50 items-center justify-between ${isScrolled ? 'bg-white' : 'bg-transparent backdrop-blur-md'}`}>
       <div className="flex items-center space-x-4">
-        {/*<img
-          alt="Logo"
-          className="h-10 w-10"
-          height="40"
-          src="/42logo.svg"
-          style={{
-            aspectRatio: "40/40",
-            objectFit: "cover",
-          }}
-          width="40"
-        />*/}
-
         <FtIcon className="h-16 w-16 text-white" color ={`${isScrolled? 'black':'white'}`}/>
         <span className={`font-bold text-lg ${isScrolled ? 'text-black' : 'text-white'}`}>Crypto</span>
       </div>
@@ -51,7 +39,7 @@ export default function Navbar() {
   )
 }
 
-function FtIcon(props: any) {
+export function FtIcon(props: any) {
   return(
     <svg
       {...props}

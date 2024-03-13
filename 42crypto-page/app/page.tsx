@@ -6,12 +6,13 @@ import { InitiativeList } from "@/components/CommonComponent/initiativeList";
 import BlockchainPicture from "../public/BlockchainPicture.jpeg"
 import CommonComponent from "../components/CommonComponent/CommonComponent";
 import HomeMenu from "../components/CommonComponent/HomeMenu";
-
+import Footer from "../components/CommonComponent/footer";
 const page = () => {
   return (
     <div >
     <CommonComponent />
     <InitiativeList />
+    <Footer />
     </div>
   )
 };
